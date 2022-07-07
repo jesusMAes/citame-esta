@@ -1,0 +1,58 @@
+Este es un archivo adicional que no se va a usar en ningún lado más, solo para apuntar cosas sin enmarranar el código, lo voy a ir separando por archivos y apunto en cada uno lo que le corresponde
+
+Ahora que tengo react lanzado como solo lo quiero usar en dos puntos creo que lo mejor es crear los dos elementos y desarrollarlo casi todo en html y css porque total, recuerda yo del futuro que en cada elemento debes importar tanto react como cualquier otro elemento que vayas a usar y luego exportarlos, quizá lo más cómodo sea crear un elemento inputs que genere los inputs según el value del radio button del html y que ese tenga un onchange que llame a este elemento aunque creo que con react lo detecta solo y ahí ponemos los inputs.
+
+Entonces le damos un value a los inputs, luego podemos crear un objeto con arrays que almacene los botones de cada categoría y con react hacer un for que genere un elemento input con las propiedades de cada uno 
+
+luego un elemento resultado que puede tener un logo si está vacío y que sería mejor no actualizar hasta que hayan al menos tres inputs rellenados, los de autor nombre y editorial 
+
+-----------------TIPOS DE CITAS APA--------------------
+
+LIBRO:
+
+CAPITULO DE LIBRO:
+
+LIBRO ONLINE:
+
+ARTÍCULO DE REVISTA:
+
+ARTICULO DE PRENSA:
+
+TESIS DOCTORAL:
+
+COMUNICACIÓN DE UN CONGRESO: 
+
+ARTICULO DE WEB:
+
+--------------------------------------------------------INDEX HTML----------------
+
+De momento he escrito los inputs radio y bajo ellos hay un div que es el que coge app para meter los componentes de react
+
+---------------INPUTS JS-------------
+ya he conseguido exportarlo y que se vea en pantalla, ahora hay que trabajar en el para que tenga funcionalidad, he metido el handle change en el cuerpo de la clase, y conseguido actualizar el state con los datos del array de muestra con el id correspondiente, el siguiente paso es crear todas las propiedades ahí usando los datos del array de muestra
+
+estoy en el metodo handle change, he conseguido pasar el state a un objeto clave valor ahora hay que logar entrar en la clave que se corresponda con el id para darle el valor del elemento cambiado
+
+---variables finales----
+como no logro acceder dinámicamente a las props va a tocar harcodear estas variables así que voy a ir escribiendo cada una 
+
+id.
+autor.
+apellidos.
+año.
+titulo.
+editorial.
+tituloCapitulo
+editor.
+tituloLibro
+paginas
+url
+tituloArticulo
+tituloRevista
+volumen
+nombreWeb
+fecha
+periodico
+universidad
+congreso
+lugar

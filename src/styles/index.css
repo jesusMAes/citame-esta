@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&family=Philosopher:ital@1&family=Tinos&family=Vidaloka&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color:  #CDDCDE;
+    text-align: center;
+
+}
+
+.App{
+    
+    text-align: center;
+    align-items: center;
+}
+
+.titulo-principal{
+    margin:15px auto;
+    font-family: 'Vidaloka', serif;
+}
+h4{
+    font-family: 'Vidaloka', serif;
+}
+.botones{
+    display:flex;
+    
+    padding: 10px;
+    min-width: 100%;
+   
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin: 5px auto;
+    
+}
+@media (max-width:620px){
+    .botones-wrap{
+        transform:scale(0.7);
+        margin-top: 10px;
+    }
+    .botones-wrap span{
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 300px){
+    .botones-wrap{
+        transform:scale(0.5);
+        margin-top: 10px;
+    }
+    .botones-wrap span{
+        transform: scale(0.5);
+    }
+    .boton{
+        position: absolute;
+        top: 25px;
+        left: 50%;
+    }
+}
+.botones .botones-wrap{
+    display:flex;
+    
+    padding: 10px;
+    width: 75%;
+    
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin: 5px auto;
+    
+}
+
+
+.botones .botones-wrap input{
+    appearance: none;
+}
+
+.botones .botones-wrap span{
+    
+    width:33%;
+    height: 30px;
+    margin-bottom: 30px;   
+}
+
+
+
+@media  (min-width: 750px){
+    .botones span{
+        width: 25%;
+    }
+}
+@media (min-width: 1000px){
+    .botones{
+        width: 70%;
+    }
+}
+.botones span label {
+    display:block;
+    font-size: 20px;
+    font-family: 'Vidaloka', serif;
+    transition: transform 0.5s ease, opacity 0.2s ease;
+
+}
+
+.botones span i{
+    display: block;
+    color: #16373C;
+    font-size: 25px;
+    transition: transform 0.5s ease-in-out, opacity 0.2s ease;
+}
+.botones span label:hover {
+    cursor:pointer;
+    transform: translateY(-6px)
+}
+
+:checked +label i{
+    
+    text-shadow: 2px 3px 4px #2B4448 ;
+    animation: salta 1.2s infinite;
+}
+
+
+@keyframes salta {
+    0%{
+        transform: translateY(0px);
+        text-shadow: 2px 3px 4px #2B4448 ;
+    }
+    50%{
+        transform: translateY(-4px);
+        text-shadow: 2px 3px 4px white ;
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.boton,
+.boton span{
+  display: inline-block;
+  box-sizing: border-box; 
+  
+}
+
+.boton{
+    position: relative;
+    width: 50px;
+    
+    height: 44px;
+    margin-left: 20px;
+    background: none;
+    border:none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.boton:focus:not(:focus-visible){
+    outline:none;
+}
+
+.boton span{
+    position: absolute;
+    
+    width: 100%;
+    height:4px;
+    background: #16373C;
+    border-radius: 4px;
+}
+
+.boton span:nth-of-type(1){
+    top: 0;
+    left:0;
+    transition: top .3s;
+}
+
+.boton span:nth-of-type(2){
+    top:20px;
+    left:0;
+    transition: opacity .3s;
+}
+
+.boton span:nth-of-type(3){
+    bottom:0;
+    left:0;
+    transition:bottom .3s;
+}
+
+.boton.active span:nth-of-type(1){
+    top:20px;
+    transform: rotate(-45deg);
+    transition: top .3s cubic-bezier(.36, -.42, .68, -.56), transform .3s .3s;
+
+}
+.boton.active span:nth-of-type(2){
+    opacity:0;
+    transition: opacity .05s .3s;
+}
+.boton.active span:nth-of-type(3) {
+    bottom: 20px;
+    transform:rotate(45deg);
+    transition: bottom .3s cubic-bezier(.36, -.42, .68, -.56), transform .3s .3s;
+}
+
+.cerrar{
+   
+    animation: slide-out-left 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes slide-out-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0) scaleY(1);
+              height: 200px;
+              width: 75%;
+      opacity: 1;
+    }
+   
+    100% {
+      -webkit-transform: translateX(-1500px);
+              transform: translateX(-1500px) scaleY(-1);
+              height: 15px;
+              width: 15px;
+      opacity: 0;
+    }
+  }
+
+
+  /*-----------ANIMACIÓN DE ENTRADA---------------*/
+  .abrir{
+   
+    animation: slide-out-right 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes slide-out-right {
+    0% {
+      -webkit-transform: translateX(-1500px);
+              transform: translateX(-1500px) scaleY(0);
+              height: 15px;
+              width: 15px;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px) scaleY(1);
+              height: 200px;
+              width: 75%;
+      opacity: 1;
+    }
+  }
+  
+
+
+ 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <link rel="icon" href="%PUBLIC_URL%/dragon-logo.png" />
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--fin font awesome-->
+    <link rel="stylesheet" href="../styles/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  
+    
+    
+    <title>Cítame Esta</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <h1 class="titulo-principal">CÍTAME ESTA</h1>
+    <div id="root"></div>
+    <main>
+      <h4>¿Qué vas a citar?</h4>
+      <div class="botones">
+        <div class>
+          <button class="boton active">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        </div>
+        
+        <div class="botones-wrap abrir">
+        <span>
+        <input type="radio" value="libro" id="libro"
+        name="tipoCita" checked>
+        <label for="libro"><i class="fas fa-book"></i> Libro</label>
+      </span>
+        
+        <span>
+        <input type="radio" value="capituloLibro" id="capituloLibro"
+        name="tipoCita">
+        <label for="capituloLibro"><i class="fa-solid fa-book-bookmark"></i>Capitulo de Libro</label>
+        </span>
+
+        <span>
+        <input type="radio" value="libroOnline" id="libroOnline"
+        name="tipoCita">
+        <label for="libroOnline"><i class="fa-solid fa-book-atlas"></i>Libro Online</label>
+        </span>
+        
+        <span>
+        <input type="radio" value="articulo" id="articulo"
+        name="tipoCita">
+        <label for="articulo"><i class="fa-solid fa-microscope"></i>Paper</label>
+        </span>
+
+        <span>
+          <input type="radio" value="web" id="web"
+          name="tipoCita">
+          <label for="web"><i class="fa-solid fa-wifi"></i>Web</label>
+          </span>
+
+        <span>
+        <input type="radio" value="periodico" id="periodico"
+        name="tipoCita">
+        <label for="periodico"><i class="fa-solid fa-newspaper"></i> Periodico </label>
+        </span>
+
+        <span>
+        <input type="radio" value="tesis" id="tesis"
+        name="tipoCita">
+        <label for="tesis"><i class="fa-solid fa-newspaper"></i> Tesis Doctoral </label>
+        </span>
+
+        <span>
+        <input type="radio" value="congreso" id="congreso"
+        name="tipoCita">
+        <label for="congreso"><i class="fa-solid fa-people-line"></i> Congreso </label>
+        </span>
+
+      </div>
+
+
+      </div>
+      <div id="react-components">
+
+      </div>
+    </main>
+    <script>
+      const cerrarBotones = document.querySelector(".botones-wrap")
+      const botonActivar = document.querySelector(".boton");
+      botonActivar.addEventListener('click', (e)=> {
+        e.currentTarget.classList.toggle('active' );
+        cerrarBotones.classList.toggle('cerrar');
+        cerrarBotones.classList.toggle('abrir');
+      });
+      ;
+
+     
+    </script>
+    
+  </body>
+</html>
