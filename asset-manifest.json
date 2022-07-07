@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/citame-esta/static/css/main.41b9a512.css",
+    "main.js": "/citame-esta/static/js/main.6aee3117.js",
+    "index.html": "/citame-esta/index.html",
+    "main.41b9a512.css.map": "/citame-esta/static/css/main.41b9a512.css.map",
+    "main.6aee3117.js.map": "/citame-esta/static/js/main.6aee3117.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41b9a512.css",
+    "static/js/main.6aee3117.js"
+  ]
+}
