@@ -237,26 +237,32 @@ class Inputs extends React.Component{
 
     handleCopy(e){
         let copia1 = document.getElementById("salida");
-        let copia =copia1.innerHTML;
+        console.log("prueba"+copia1.innerHTML);
+        let copia;
+        copia = copia1.innerHTML;
         let lista = '<ul> ';
         //le metemos ul porque innerhtml se lo deja fuera
         let copiaOverlay = document.getElementById("outputBibliografia");
-        let biblioSalida = copiaOverlay.innerHTML;
-        biblioSalida = lista+ biblioSalida+ '</ul>';
+      
         
         //vamos a quitar la parte de la bibliografia
          let indice = copia.indexOf(':');
         let copiaCortada = copia.slice(indice+1);
         //como tenemos que procesar las cursivas el copiar es un poco más complejo porque hay que crear clipboards item y decirle que es texto html
 
-        console.log(biblioSalida)
+        
 
         if(e.target.id=='copiaBibliografia'){
+            let biblioSalida = copiaOverlay.innerHTML;
+            biblioSalida = lista+ biblioSalida+ '</ul>';
             copy(biblioSalida, {asHtml: true});
         }else{
         //esto es de la libreria copy html, tanta vuelta y mareos y al final hubo que tirar de ahí
-        copy(copiaCortada, {asHtml: true})
+       
+            copy(copiaCortada, {asHtml: true});
         }
+    
+        
     }
    
     descargaBibliografia(){
