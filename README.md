@@ -1,3 +1,6 @@
+sample  React app that citates academic papers in APA format
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
